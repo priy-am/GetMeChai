@@ -17,45 +17,29 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-9 text-center">Your fan can buy a chai</h2>
         <div className="flex gap-5 px-1 w-full items-center justify-around">
           <div className="item flex flex-col gap-2 justify-center items-center">
-            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/man.avif" width={"88"} alt="" />
+            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/man.avif" width={"88"} alt="man" />
             <p className="font-bold text-center">found yourself</p>
             <p className=" text-center">Your fans are available for you to help you</p>
           </div>
           <div className="item flex flex-col gap-2 justify-center items-center">
-            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/coin.gif" width={"88"} alt="" />
+            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/coin.gif" width={"88"} alt="coin" />
             <p className="font-bold text-center">found yourself</p>
             <p className=" text-center">Your fans are available for you to help you</p>
           </div>
           <div className="item flex flex-col gap-2 justify-center items-center">
-            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/group.gif" width={"88"} alt="" />
+            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/group.gif" width={"88"} alt="group" />
             <p className="font-bold text-center">Fans want to help</p>
             <p className=" text-center">Your fans are available for you to help you</p>
           </div>
         </div>
       </div>
 
-      <div className="bg-white h-[3px] opacity-25"></div>
+      {/* <div className="bg-white h-[3px] opacity-25"></div>
 
       <div className="text-white flex flex-col py-20 gap-5 items-center justify-center ">
         <h2 className="text-3xl font-bold mb-9 text-center">Learn more about us</h2>
-        {/* <div className="flex gap-5  w-full items-center justify-around">
-          <div className="item flex flex-col gap-2 justify-center items-center">
-            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/man.avif" width={"88"} alt="" />
-            <p className="font-bold">found yourself</p>
-            <p className=" text-center">Your fans are available for you to help you</p>
-          </div>
-          <div className="item flex flex-col gap-2 justify-center items-center">
-            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/coin.gif" width={"88"} alt="" />
-            <p className="font-bold">found yourself</p>
-            <p className=" text-center">Your fans are available for you to help you</p>
-          </div>
-          <div className="item flex flex-col gap-2 justify-center items-center">
-            <img className="rounded-full bg-center bg-slate-500 mix-blend-hard-light" src="/group.gif" width={"88"} alt="" />
-            <p className="font-bold">Fans want to help</p>
-            <p className=" text-center">Your fans are available for you to help you</p>
-          </div>
-        </div> */}
-      </div>
+        
+      </div> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useCallback } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { fetchuser, updateProfile } from "@/action/useraction";
@@ -13,20 +13,24 @@ const Dashboard = () => {
   const router = useRouter();
   const [form, setform] = useState({})
 
+
+  
+  const getData = useCallback(async () => {
+    if (session?.user?.name) {
+      let u = await fetchuser(session?.user.name);
+      setform(u);
+    }
+  }, [session?.user?.name]);
+
+
   useEffect(() => {
     document.title = "Dashboard - Get me chai"
-    getData();
     if (!session) {
       router.push("/login");
     }
-  }, [router, session])
+    getData();
+  }, [router, session, getData])
   
-  
-
-  const getData = async()=>{
-    let u = await fetchuser(session?.user.name)
-    setform(u)
-  }
 
   const handleSubmit = async(data) => {
     update()

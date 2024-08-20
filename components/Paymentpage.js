@@ -156,8 +156,8 @@ const Paymentpage = ({ username }) => {
                     <span className="font-bold">{`₹${
                       user?.amount / 100
                     }`}</span>{" "}
-                    with a meassage "
-                    <span className="font-mono"> {user.message} </span> "
+                    with a meassage &quot;
+                    <span className="font-mono"> {user.message} </span> &quot;
                   </span>
                 </li>
               );
@@ -198,9 +198,7 @@ const Paymentpage = ({ username }) => {
               }}
               className={`w-56 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2 text-xl  ${
                 (paymentform.name.length <= 3 || paymentform.amount <= 1) &&
-                "opacity-50 cursor-not-allowed"
-              } `}
-            >
+                `opacity-50 cursor-not-allowed`} `}>
               Pay
             </button>
           </div>
@@ -209,7 +207,7 @@ const Paymentpage = ({ username }) => {
             <button
               disabled={paymentform.name.length <= 3}
               className={`rounded-lg bg-slate-800 p-3 hover:bg-slate-600 ${
-                paymentform.name.length <= 3 && "opacity-50 cursor-not-allowed"
+                paymentform.name.length <= 3 && `opacity-50 cursor-not-allowed`
               } `}
               onClick={() => pay(1000)}
             >
@@ -218,7 +216,7 @@ const Paymentpage = ({ username }) => {
             <button
               disabled={paymentform.name.length <= 3}
               className={`rounded-lg bg-slate-800 p-3 hover:bg-slate-600 ${
-                paymentform.name.length <= 3 && "opacity-50 cursor-not-allowed"
+                paymentform.name.length <= 3 && `opacity-50 cursor-not-allowed`
               } `}
               onClick={() => pay(2000)}
             >
@@ -227,7 +225,7 @@ const Paymentpage = ({ username }) => {
             <button
               disabled={paymentform.name.length <= 3}
               className={`rounded-lg bg-slate-800 p-3 hover:bg-slate-600 ${
-                paymentform.name.length <= 3 && "opacity-50 cursor-not-allowed"
+                paymentform.name.length <= 3 && `opacity-50 cursor-not-allowed`
               } `}
               onClick={() => pay(3000)}
             >
