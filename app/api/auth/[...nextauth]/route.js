@@ -36,7 +36,7 @@ export const authoption = NextAuth({
     //   from: 'NextAuth.js <no-reply@example.com>'
     // }),
   ],
-  
+
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       if (account.provider == "github") {
@@ -47,16 +47,19 @@ export const authoption = NextAuth({
             name: user.name,
             username: user.email.split("@")[0],
           });
-          await newUser.save()
+          await newUser.save();
         }
       }
       return true;
     },
     async session({ session, user, token }) {
-      const dbuser = await User.findOne({email:session.user.email})
-
-      session.user.name = dbuser.username
-      return session;
+      try {
+        const dbuser = await User.findOne({ email: session.user.email });
+        session.user.name = dbuser.username;
+        return session;
+      } catch (error) {
+        console.log("Error fetching user:", error);
+      }
     },
   },
 });
