@@ -11,6 +11,9 @@ import connectDB from "@/db/connectDb";
 
 await connectDB();
 
+
+console.log('NEXTAUTH_SECRET:', process.env.NEXTAUTH_SECRET);
+
 export const authoption = NextAuth({
   providers: [
     // OAuth authentication providers...
